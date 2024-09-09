@@ -1,0 +1,17 @@
+pipeline{
+ agent any
+
+stages{
+stage("clone"){
+steps{
+sh "git clone "
+}
+}
+
+stage("build"){
+steps{
+sh "mvn clean install"
+}
+}
+}
+
